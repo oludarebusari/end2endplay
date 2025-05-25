@@ -12,6 +12,10 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
+          name: Install Playwright system dependencies
+          command: |
+            sudo npx playwright install-deps
+      - run:
           name: Install Playwright dependencies
           command: |
             npm install
