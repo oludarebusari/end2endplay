@@ -37,8 +37,10 @@ test.describe("Tips & Tricks Page Tests", () => {
     const context = await browser.newContext();
     const page1 = await context.newPage();
     const page2 = await context.newPage();
+    const page3 = await context.newPage();
     await page1.goto("https://example.com");
     await page2.goto("https://www.yahoo.com");
+    await page3.goto("https://www.bing.com");
     await page1.waitForTimeout(5000);
 
   });
