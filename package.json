@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
-    "test:dev": "playwright test ./e2e-filter-transactions.spec.ts --headed",
+    "test:dev": "playwright test ./tips.spec.ts",
     "test:api": "playwright test --config=playapi.config.ts --project=chromium",
+    "test:pdf": "npx playwright pdf https://www.google.com ./pdf/google.pdf",
     "test:ui": "playwright test --ui",
     "test:debug": "playwright test --debug",
     "test:report": "playwright show-report",

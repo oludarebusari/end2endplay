@@ -22,7 +22,7 @@ jobs:
             npx playwright install
       - run:
           name: Run Playwright tests
-          command: npm run test:api -- --reporter=list
+          command: npm run test:dev -- --reporter=list
   deploy:
     # This is an example deploy job, not actually used by the workflow
     docker:
