@@ -5,15 +5,20 @@ orbs:
   node: circleci/node@5
 jobs:
   test-node:
-    # Install node dependencies and run tests
+    # Install node dependencies and run Playwright tests
     executor: node/default
     steps:
       - checkout
       - node/install-packages:
           pkg-manager: npm
       - run:
-          name: Run tests
-          command: npm test --passWithNoTests
+          name: Install Playwright dependencies
+          command: |
+            npm install
+            npx playwright install
+      - run:
+          name: Run Playwright tests
+          command: npm test -- --reporter=list
   deploy:
     # This is an example deploy job, not actually used by the workflow
     docker:
