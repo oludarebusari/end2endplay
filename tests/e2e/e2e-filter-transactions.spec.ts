@@ -18,7 +18,7 @@ test.describe('Filter Transactions', () => {
   test('Verify the results for each account', async ({ page }) => {
     await page.click('#account_activity_tab')
     await page.selectOption('#aa_accountId', '2')
-    const checkingAccount = await page.locator(
+    const checkingAccount = page.locator(
       '#all_transactions_for_account tbody tr'
     )
     await expect(checkingAccount).toHaveCount(3)

@@ -17,7 +17,7 @@ test.describe('New Payment', () => {
     navbar = new Navbar(page)
 
     homePage.visit()
-    homePage.clickOnSignIn()
+    homePage.clickSignIn()
     loginPage.login('username', 'password')
   })
 
