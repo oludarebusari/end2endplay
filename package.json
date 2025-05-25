@@ -1,0 +1,27 @@
+{
+  "name": "ty_playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:dev": "playwright test ./e2e-filter-transactions.spec.ts --headed",
+    "test:api": "playwright test --config=playapi.config.ts --project=chromium",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "test:report:html": "playwright show-report --report=html",
+    "test:report:json": "playwright show-report --report=json",
+    "test:report:json:allure": "playwright show-report --report=allure-playwright",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.21",
+    "prettier": "3.5.3"
+  }
+}
