@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
-    "test:dev": "playwright test ./e2e-interview8.spec.ts --headed",
+    "test:dev": "playwright test ./e2e-interview8.spec.ts --headed --ui",
     "test:api": "playwright test --config=playapi.config.ts --project=chromium",
     "test:pdf": "npx playwright pdf https://www.google.com ./pdf/google.pdf",
     "test:ui": "playwright test --ui",
